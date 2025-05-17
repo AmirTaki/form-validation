@@ -30,3 +30,22 @@
     text-align: center;
     padding: 5px 8px;
 }
+
+.signup-body p {
+    margin-top: 20px;
+}
+
+.signup-body p label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.signup-body p input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-block: 4px ;
+    border: none;
+    outline: none;
+    color : #000
+}
