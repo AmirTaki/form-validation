@@ -35,6 +35,12 @@
     margin-top: 20px;
 }
 
+.signup-body p span {
+    font-size: 18px;
+    font-weight: 600;
+    color : #90ee90
+}
+
 .signup-body p label {
     font-size: 18px;
     font-weight: 600;
