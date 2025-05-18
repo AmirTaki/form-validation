@@ -54,7 +54,7 @@ const validationPassword = () => {
         return false
     }
 
-    if (!password.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,30}$/)) {
+    if (!password.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)) {
         passError.innerHTML = 'Password should contain 1Uppercase, 1Lowecase, 1 Digit & 1Alphabet '
         passError.previousElementSibling.classList.add('bi-x')
         return false
