@@ -3,8 +3,20 @@ const nameErorr = document.getElementById('nameError')
 
 const validationName  =() =>{
     let name = document.getElementById('name').value
-    nameErorr.innerText = name.length  == 0 ? "Name is required"  : '' 
-    return name.length  == 0 ? true : false;
+
+    if ( name.length  == 0 ){
+        nameErorr.innerHTML = "Name is required"
+        return false
+    }
+
+    if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+        nameErorr.innerHTML = 'Write full Name'
+        return false
+    }
+        
+    return true
+
+
     
 }
 
