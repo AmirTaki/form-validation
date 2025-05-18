@@ -1,6 +1,7 @@
 const submitBtn = document.getElementById("submitBtn")
 const nameErorr = document.getElementById('nameError')
 const emailError = document.getElementById('emailError')
+const passError = document.getElementById('passError')
 
 const validationName  =() =>{
     let name = document.getElementById('name').value
@@ -43,9 +44,29 @@ const validationEmail = () => {
     return true
 
 }
+
+const validationPassword = () => {
+    let password  = document.getElementById('password').value
+
+    if ( password.length  == 0 ){
+        passError.innerHTML = "Password is required";
+        passError.previousElementSibling.classList.add('bi-x')
+        return false
+    }
+
+    if (!password.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,30}$/)) {
+        passError.innerHTML = 'Password should contain 1Uppercase, 1Lowecase, 1 Digit & 1Alphabet '
+        passError.previousElementSibling.classList.add('bi-x')
+        return false
+    }
+    
+    passError.innerHTML = ''
+    passError.previousElementSibling.classList.add('bi-check-lg')    
+    return true
+}
+
 submitBtn.addEventListener('click', (e)=>{
     e.preventDefault();
-    validationName() &&  validationEmail() ? alert ('From Submitted Successfully') : ''
-
-
+    validationName() &&  validationEmail() && validationPassword() ? alert ('From Submitted Successfully') : ''
 })
+
