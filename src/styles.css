@@ -61,3 +61,15 @@
 .signup-body p input[type= "submit"]:hover {
     background-color: #2773a5;
 }
+
+.sigup-footer p {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.sigup-footer p a {
+    text-decoration: none;
+}
+.sigup-footer p a:hover {
+    text-decoration: underline;
+}
